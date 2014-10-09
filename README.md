@@ -1,7 +1,5 @@
 ###Angular Guide and Best Practices
 
-<font color='red'>Author: Brent Engwall (Oct 2014)</font>
-
 
 #About this Guide
 
