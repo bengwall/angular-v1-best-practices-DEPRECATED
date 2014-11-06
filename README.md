@@ -293,9 +293,9 @@ Pathname: `/common/directives/xx-alert.js`
 "use strict";
 angular.module('xx.alert', [])
 
-.controller('AlertCtrl', ['$scope', '$attrs', function ($scope, $attrs) {
+.controller('AlertCtrl', function ($scope, $attrs) {
 	$scope.closeable = 'close' in $attrs;
-}])
+})
 
 .directive('xxAlert', function () {
  	return {
@@ -318,9 +318,9 @@ angular.module('xx.alert', [])
 
 
 ###Domain Models
-* **DEFINITION:** Angular does not required the use of models, nor does it dictate how build your models.  Models are completely optional in Angular, but I would highly recommend you use them for the following reasons:
+* **DEFINITION:** Angular does not require the use of models, nor does it dictate how build your models.  Models are completely optional in Angular, but I would highly recommend you use them for the following reasons:
 	* Domain models will help you organize your app because they model the real world.  Models go beyond POJO's in that they not only allow you to store data in an object, but methods also.  A Person model, for instance, will not only store data about the person, but also will know how to persist, load and rate itself.  Most of my business layer disappeared because most of the methods became methods in the models. 
-	* Object orientated capabilities are now consistantly be added to the JavaScript spec.  
+	* JavaScript will quickly become more object orientated.  OO features are being added with EM6.  
 * **NAMING:** Filenames SHOULD be the model name.  For example,  `person.js, address.js`.
 * **GUIDELINES:** 
     * There are many ways to create models in JavaScript.  I have iterated over several methods while striving to achieve a simple and maintainable design.  The example below is what I came up with.
@@ -407,7 +407,7 @@ angular.module("xx.model.person", [
 
 		return Person;
 	}
-)
+model)
 ;
 ```
 
@@ -450,7 +450,7 @@ angular.module( 'xx.service.personService', [
     'restangular'
 ])
 
-.factory('PersonService', ['Restangular', 
+.factory('PersonService',  
 	function(Restangular) {
 		
 		var PersonService = {
@@ -466,7 +466,7 @@ angular.module( 'xx.service.personService', [
 	
 		return PersonService
 	}
-]);
+);
 ```
 See the reference application for additional examples and learn how to setup interceptors and implement error handling.
 
@@ -475,29 +475,11 @@ See the reference application for additional examples and learn how to setup int
 
 * Caching patterns will be defined shortly.  We especially want to cache responses from our service calls.  Like, for instance, static zip code and person information.
 * For session-level cache you can use `$cacheFactory`. This should be used to cache results from requests or heavy computations.
-* Restangular has built in caching which can be turned on.  This is the only caching our application is currently using.
+* Restangular also has built in caching which can be used.
 
-# Other AngularJS Tips
-
-* Use promises (`$q`) instead of callbacks. It will make your code look more elegant and clean, and save you from callback hell.
-* Use `$resource` instead of `$http` when possible. The higher level of abstraction will save you from redundancy.
-* Do not pollute your `$scope`. Only add functions and variables that are being used in the templates.
-* Use controllers rather than `ngInit` to initialize values on a scope.  (The only appropriate use of `ngInit` is for aliasing special properties of `ngRepeat`.)
-* You should not need JQuery.  Directives and other Angular features should resolve 99% of your needs.  There is a stripped down version of JQuery included within AngularJS (called jqLite) which you can investigate as a next to last resort.  Here is a short [jqLite reference](http://docs.angularjs.org/api/ng/function/angular.element).
-* Use the `resolve` property to resolve dependencies before control is handed to a controller and the page displays.  This will reduce flickering during page transitions when retrieving data via REST calls needed for the view.  Here is a very good tutorial and example:
-    * http://blog.brunoscopelliti.com/show-route-only-after-all-promises-are-resolved 
-
-
-
-
-## When to use $rootScope
-Using Angular has it's gray areas in design decisions.  One of these areas is when to use \$rootscope.  \$rootScope is global, so it should be used carefully.  (For web developers, think of how you use Session.)
-
-Use \$rootScope when you need to use an object globally throughout your whole app.  Many folks believe that a Service should be used to store global objects and properties.  I've tried this and it becomes too cumbersome to constantly create getters and setters each time a global variable is needed.  The service also needs to be injected where ever you this information.  I generally create an object under $rootScope called SESSION.  I then store all global values there.
-
-> Do not use \$rootScope lazily.  You do not want to litter $rootScope unnecessarily.
 
 ## Use Angular Functions and LoDash
+
 JavaScript is a functional language.  In that mode, it pays to get familiar with [AngularJS's built in functions](http://docs.angularjs.org/api/ng/function) and the [LoDash](http://lodash.com/) library.  These little functions will simplify your code, save you days of development, and make your coding much more enjoyable.
 
 #### Example #1
@@ -602,15 +584,9 @@ There are generally accepted unit test practices in the development community wh
 ### Development Workflow and Build Process
 
 * **Node**:  Node does a lot, but we will not be using it for the server, but for the package manager.
-* **Grunt or Gulp**: Gulp is used to build, preview and test your project.  Gulp may now be the forerunner to Grunt.  Gulp has a lot of momentum, but Grunt is the well established.
+* **Grunt and Gulp**: Gulp is used to build, preview and test your project.  Gulp may now be the forerunner to Grunt.  Gulp has a lot of momentum, but Grunt is  well established.
 * **Yoman**: Yo scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks that you might need for your build.
-* **Sass**: CSS compiler
+* **Sass and Less**: These are CSS compiliers.  Sass has the momentum right now and is my first choice.
 * **Bower**: Bower is used for dependency management, so that you no longer have to manually download and manage your scripts.
-* **[ng-annotate](https://github.com/olov/ng-annotate)** to annotating dependencies using array syntax on each controller definitions.
 
-```JavaScript
-module.controller('MyController', ['dependency1', 'dependency2', ..., 'dependency', function (dependency1, dependency2, ..., dependency) {
-  //...body
-}]);
-```
 
