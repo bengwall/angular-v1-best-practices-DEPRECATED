@@ -527,43 +527,6 @@ var foundFlow = _.find(flows, {'name' : flowName});
 
 
 
-# JavaScript Tips
-
-* Use `===` instead of `==`.  `===` or 'strict comparison' means is the same type and equal.  `==` simply means equal.  Only use `==` when checking for *null* and *undefined*.
-
-```
-1 == "1"     		// true, auto type coercion
-1 === "1"    		// false, because they are of a different type
-1 !== "1"    		// true, inequality check also available
-null == undefined 	// true
-null === undefined 	// false
-'0' == false 		// true
-'0' === false 		// false
-```
-* Shorthand if-then-else examples.
-```
-var a  = (b === c) ? d : e                 
-// if b equals c, then make a = d else make a = e
-
-var aa = ((_ref = bb) === cc) ? _ref : ee  
-// if bb equals cc, then make aa = bb else make aa = ee
-```
-* In JavaScript, “var object1 = object2”, this actually just creates a reference.   When you change object1, the object2 will also change.  What you want to do is clone the object using [angular.copy](  http://docs.angularjs.org/api/ng/function/angular.copy).
-
-Here are some other useful guides for JavaScript:
-
-1. [Google's JavaScript style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
-0. [Douglas Crockford's JavaScript style guide](http://javascript.crockford.com/code.html)
-0. [Airbnb JavaScript style guide](https://github.com/airbnb/javascript)
-0. [JavaScript Garden](http://bonsaiden.github.io/JavaScript-Garden/#equality)
-
-
-#Other Useful Links and Blogs
-* [Random Tips](http://blog.tomaka17.com/2012/12/random-tricks-when-using-angularjs/)
-* [Bruno Scopelliti's blog](http://blog.brunoscopelliti.com/)
-* [AngularJS Blog](http://blog.angularjs.org/)
-* [AngularJS Faq](http://docs.angularjs.org/misc/faq)
-* [Dean Sofer's tips](http://deansofer.com/posts/view/14/AngularJs-Tips-and-Tricks-UPDATED)
 
 #Related Technology
 
