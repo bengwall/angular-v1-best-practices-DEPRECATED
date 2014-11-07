@@ -7,6 +7,7 @@ AngularJS provides a broad set of capabilities which can dramatically accelerate
 
 This guide is based on many resources.  Here are some of the resources which have been most helpful:
 
+0. [Angular Style Guide by Todd Motto](https://github.com/toddmotto/angularjs-styleguide)
 0. [ng-boilerplate](http://joshdmiller.github.io/ng-boilerplate/#/home)
 0. [The old way, the Angular way](http://thesmithfam.org/blog/2012/12/02/angularjs-is-too-humble-to-say-youre-doing-it-wrong/)
 0. [AngularJS Best Practices: I’ve Been Doing It Wrong! (Part 1 of 3)](http://www.artandlogic.com/blog/2013/05/ive-been-doing-it-wrong-part-1-of-3/)
