@@ -39,6 +39,7 @@ This guide NOT intended to give an overview of how Angular works.  This guide as
     * Great blog post on Promises:  [Overview](http://liamkaufman.com/blog/2013/09/09/using-angularjs-promises/), [Chaining](http://solutionoptimist.com/2013/12/27/javascript-promise-chains-2/)
 0. Read the book [Mastering Web Application Development with AngularJS](http://books.google.com/books?id=mZXjwz5X08EC&pg=PT125&lpg=PT125&dq=angularjs+spanning+module+across+many+files&source=bl&ots=T4HZQQP5RX&sig=GP1K1rK-4YXUgMSn2jWksavMCBo&hl=en&sa=X&ei=ZtX8UoeEJci6yAHTvoBA&ved=0CDwQ6AEwAg#v=onepage&q=angularjs%20spanning%20module%20across%20many%20files&f=false) online.
 0. Experiment with Angular on [jsFiddle](http://jsfiddle.net/basarat/V9sYB/).
+0. Go through some angular UI libraries such as [Angular Material](https://material.angularjs.org/#/) and [AngularUI](https://angular-ui.github.io/)
 
 
 #Table of content
@@ -541,6 +542,8 @@ There are generally accepted unit test practices in the development community wh
 * **[More](http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd)** testing tools.
 
 [Angular Team's E2E Testing Guide](http://docs.angularjs.org/guide/dev_guide.e2e-testing)
+
+Some Angular projects that have a great set of examples for testing are [AngularUI](https://angular-ui.github.io/) and [Angular Translate](https://github.com/angular-translate/angular-translate)
 
 
 
