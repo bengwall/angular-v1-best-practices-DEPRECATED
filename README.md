@@ -501,7 +501,7 @@ _.each(options.flows, function(flow) {
 
 // or better yet...
 scope.pageActionHandlers = _.map(options.flows, function(flow){
-    return {flow.name: flow.andlers};
+    return {flow.name: flow.handlers};
 });
                             .
 ```
