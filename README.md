@@ -8,16 +8,11 @@ AngularJS provides a broad set of capabilities which can dramatically accelerate
 This guide is based on many resources.  Here are some of the resources which have been most helpful:
 
 0. [Angular Style Guide by Todd Motto](https://github.com/toddmotto/angularjs-styleguide)
-0. [The old way, the Angular way](http://thesmithfam.org/blog/2012/12/02/angularjs-is-too-humble-to-say-youre-doing-it-wrong/)
-0. [AngularJS Best Practices: I’ve Been Doing It Wrong! (Part 1 of 3)](http://www.artandlogic.com/blog/2013/05/ive-been-doing-it-wrong-part-1-of-3/)
-1. [AngularJS Best Practices: I’ve Been Doing It Wrong! (Part 2 of 3)](http://www.artandlogic.com/blog/2013/05/angularjs-best-practices-ive-been-doing-it-wrong-part-2-of-3/)
-2. [AngularJS Best Practices: I’ve Been Doing It Wrong! (Part 3 of 3)](http://www.artandlogic.com/blog/2013/05/angularjs-best-practices-ive-been-doing-it-wrong-part-3-of-3/)
 0. [GitHub angularjs-style-guide](https://github.com/mgechev/angularjs-style-guide) 
 0. http://trochette.github.io/Angular-Design-Patterns-Best-Practices
 0. [Some tips from the Angular team](https://github.com/angular/angular.js/wiki/FAQ)
 0. The book [Mastering Web Application Development with AngularJS](http://www.amazon.com/Mastering-Web-Application-Development-AngularJS/dp/1782161821) and its companion app [angular-app](https://github.com/angular-app/angular-app).  You can read and search the book [online](http://books.google.com/books?id=mZXjwz5X08EC&pg=PT125&lpg=PT125&dq=angularjs+spanning+module+across+many+files&source=bl&ots=T4HZQQP5RX&sig=GP1K1rK-4YXUgMSn2jWksavMCBo&hl=en&sa=X&ei=ZtX8UoeEJci6yAHTvoBA&ved=0CDwQ6AEwAg#v=onepage&q=angularjs%20spanning%20module%20across%20many%20files&f=false).
 0. [Google's AngularJS Style guide](https://google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html).  (This is, however, skewed because it is written for Google's internal environment.)
-0. [Best Practice Recommendations for Angular App Structure](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub).  This heavily leans on Google's JavaScript Style Guide.
 
 ### Learning Angular
 This guide NOT intended to give an overview of how Angular works.  This guide assumes that the reader has familiarity with AngularJS.  There are many external resources already available which the developer can use to quickly get understand Angular.  We would recommend following these steps:
